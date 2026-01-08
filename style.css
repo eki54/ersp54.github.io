@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* 상단 소개 영역 */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 100px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 사진 영역 */
+.profile-image {
+  width: 180px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 텍스트 영역 */
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #888;
+}
+
+/* 본문 */
+.content {
+  padding: 80px 100px;
+}
+
+.placeholder {
+  font-size: 16px;
+  color: #666;
+}
+/* 프로젝트 카드 */
+.project {
+  max-width: 1000px;
+}
+
+/* 제목 + 연도 */
+.project-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px; /* 🔧 수정: 간격 줄이기 */
+}
+
+.project-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.year {
+  font-size: 17px;
+  color: #888;
+}
+
+/* 스틸컷 3장 */
+.stills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;          /* 🔧 수정: 사진 간격 조금 더 좁게 */
+  max-width: 900px;   /* 🔧 추가: 전체 크기 줄이기 (핵심) */
+}
+
+.stills img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+}
+/* 링크 */
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.stills-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 900px;
+}
+
+.photo-item {
+  display: block;
+  text-decoration: none;
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f0f0f0;
+  transition: transform 0.25s ease;
+}
+
+/* Photography */
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.photo-item:hover img {
+  transform: scale(1.02);
+}
+
+.stills, .photo-grid {
+  margin-left: 0;  /* 기본 */
+}
+
+.section {
+  margin-bottom: 120px; /* 영상 ↔ 사진 간 거리 */
+}
+
+/* 유튜브, 인스타그램 링크 */
+.links {
+  margin-top: 16px;
+  display: 14px;
+  flex-direction: italic;
+  color: #777;
+}
+
+.links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #111;
+}
+
+.divider {
+  margin: 0 4px;
+}
