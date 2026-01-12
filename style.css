@@ -12,7 +12,7 @@ body {
 
 /* HEADER */
 .intro {
-  padding: 80px 0;
+  padding: 90px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -75,7 +75,7 @@ body {
 
 /* LAYOUT */
 .content {
-  padding: 80px 0;
+  padding: 50px 0 80px;  
 }
 
 .container {
@@ -85,7 +85,7 @@ body {
 }
 
 .section {
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 }
 
 /* PROJECT */
@@ -161,3 +161,52 @@ body {
   font-size: 13px;
   color: #999;
 }
+
+.award-toggle {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.award-toggle:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.award-photo {
+  max-width: 720px;
+}
+
+.award-photo img {
+  width: 100%;
+  max-width: 720;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+
+.award-line {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.gmc {
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.stills-year {
+  text-align: center;
+  font-size: 17px;    /* year랑 비슷하게 */
+  font-weight: 600;   /* 타이틀 느낌 */
+  color: #111;
+  margin: 18px 0 10px; /* 위/아래 간격 */
+}
+
