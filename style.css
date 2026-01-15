@@ -210,3 +210,17 @@ body {
   margin: 18px 0 10px; /* 위/아래 간격 */
 }
 
+.still-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inline-link {
+  color: #333;              /* 🔧 기존 텍스트(#666)보다 살짝 진하게 */
+  text-decoration: none;    /* ✅ 밑줄 제거 */
+}
+
+.inline-link:hover {
+  color: #111;              /* 호버 시 더 진하게 */
+}

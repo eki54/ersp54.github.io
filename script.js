@@ -1,4 +1,3 @@
-
 const toggle = document.querySelector(".award-toggle");
 const box = document.querySelector(".award-photo");
 
