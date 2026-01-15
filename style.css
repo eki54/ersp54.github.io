@@ -158,12 +158,12 @@ body {
   margin: 10px auto 40px;   /* 그리드와 간격 + 하단 여백 */
   padding: 0 64px;          /* container와 동일한 좌우 여백 */
   text-align: right;        /* 우측 정렬 */
-  font-size: 13px;
+  font-size: 14px;
   color: #999;
 }
 
 .award-toggle {
-  margin-top: 12px;
+  margin-top: 11px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -192,7 +192,7 @@ body {
 
 
 .award-line {
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 14px;
   color: #666;
 }
@@ -223,4 +223,8 @@ body {
 
 .inline-link:hover {
   color: #111;              /* 호버 시 더 진하게 */
+}
+
+.footer div + div {
+  margin-top: 4px;
 }
