@@ -1,4 +1,4 @@
-/*
+
 const toggle = document.querySelector(".award-toggle");
 const box = document.querySelector(".award-photo");
 
@@ -10,4 +10,3 @@ if (toggle && box) {
     toggle.textContent = isOpen ? "View award photo →" : "Hide award photo ←";
   });
 }
-*/
