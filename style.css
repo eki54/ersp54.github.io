@@ -1,19 +1,37 @@
+/* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== Base ===== */
 body {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   background-color: #ffffff;
   color: #111111;
 }
 
-/* HEADER */
+/* ===== Layout (global wrappers) ===== */
+.content {
+  padding: 80px 0 80px;
+}
+
+.container {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+/* ===== Header (intro/profile) ===== */
 .intro {
-  padding: 90px 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .intro-inner {
@@ -22,7 +40,6 @@ body {
   gap: 40px;
 }
 
-/* PROFILE */
 .profile-image {
   width: 180px;
   height: 220px;
@@ -50,13 +67,14 @@ body {
 .tagline {
   margin-top: 12px;
   font-size: 16px;
-  color: #888;
+  color: #7a7a7a;
   margin-left: 2px;
 }
 
+/* ===== Header Links ===== */
 .links {
   margin-top: 16px;
-  color: #777;
+  color: #808080;
 }
 
 .links a {
@@ -73,22 +91,37 @@ body {
   margin: 0 4px;
 }
 
-/* LAYOUT */
-.content {
-  padding: 50px 0 80px;  
+/* ===== Statements (I work / I believe / I find) ===== */
+.statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 50px;
 }
 
-.container {
-  width: min(1280px, 100%);
-  margin: 0 auto;
-  padding: 0 64px;
+.statement-line {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #111;
+  text-align: center;
 }
 
-.section {
-  margin-bottom: 80px;
+.statement-divider {
+  width: 160px;
+  height: 1px;
+  background: #dfdfdf;
+  margin-top: 10px;
+   margin-bottom: -15px;
 }
 
-/* PROJECT */
+.section.statement {
+  margin-bottom: 40px;
+}
+
+/* ===== Project Common ===== */
 .project {
   max-width: 1280px;
   margin: 0 auto;
@@ -111,7 +144,7 @@ body {
   color: #888;
 }
 
-/* STILLS */
+/* ===== Stills Grid (The Seed / GMC) ===== */
 .stills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -127,41 +160,21 @@ body {
   border-radius: 6px;
 }
 
-/* PHOTOGRAPH */
-.section h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+.stills-year {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+  margin: 18px 0 10px;
 }
 
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 1280px;
-  margin: 0 auto;
+.still-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
-.photo-item img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 6px;
-  transition: transform 0.25s ease;
-}
-
-.photo-item:hover img {
-  transform: scale(1.02);
-}
-
-.footer {
-  max-width: 1280px;
-  margin: 10px auto 40px;   /* 그리드와 간격 + 하단 여백 */
-  padding: 0 64px;          /* container와 동일한 좌우 여백 */
-  text-align: right;        /* 우측 정렬 */
-  font-size: 14px;
-  color: #999;
-}
-
+/* ===== Award Toggle (The Seed) ===== */
 .award-toggle {
   margin-top: 11px;
   padding: 0;
@@ -190,7 +203,39 @@ body {
   display: block;
 }
 
+/* ===== Right Ment (공통 스타일 + 섹션별 위치 보정) ===== */
+/* (A) 섹션 wrapper: 블록 자체의 큰 여백 */
+.between-ment {
+  margin: 0px 0 150px;
+}
 
+/* (B) 문장 자체 스타일: “resonates 형식” 공통 */
+.between-ment-line {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  text-align: right;
+  font-weight: 500;
+  font-size: 25px;
+  color: #4a4a4a;
+  letter-spacing: 0.01em;
+  font-style: italic;
+
+  /* 기본 포지션(=resonates에서 쓰는 기본값) */
+  position: relative;
+  top: -40px;
+}
+
+/* (C) 섹션별 “위치/간격”만 오버라이드 */
+.gmc-ment {
+  top: 0;
+  margin-top: 50px;
+}
+
+.photo-ment {
+  top: 0;
+  margin: -30px 0 0px;
+}
+
+/* ===== GMC ===== */
 .award-line {
   margin-top: 8px;
   font-size: 14px;
@@ -199,30 +244,88 @@ body {
 
 .gmc {
   margin-top: 60px;
-  margin-bottom: 90px;
-}
-
-.stills-year {
-  text-align: center;
-  font-size: 17px;    /* year랑 비슷하게 */
-  font-weight: 600;   /* 타이틀 느낌 */
-  color: #111;
-  margin: 18px 0 10px; /* 위/아래 간격 */
-}
-
-.still-item {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+  margin-bottom: 190px;
 }
 
 .inline-link {
-  color: #333;              /* 🔧 기존 텍스트(#666)보다 살짝 진하게 */
-  text-decoration: none;    /* ✅ 밑줄 제거 */
+  color: #333;
+  text-decoration: none;
 }
 
 .inline-link:hover {
-  color: #111;              /* 호버 시 더 진하게 */
+  color: #111;
+}
+
+/* ===== Photograph ===== */
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.25s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.02);
+}
+
+/* ===== Process ===== */
+.process-section {
+  margin-top: 240px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.process-item {
+  display: block;
+  text-decoration: none;
+}
+
+.process-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f0f0f0;
+  transition: transform 0.25s ease;
+}
+
+.process-item:hover img {
+  transform: scale(1.02);
+}
+
+/* ===== Per-section spacing tweaks ===== */
+.believe-statement {
+  margin-bottom: 60px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  max-width: 1280px;
+  margin: 10px auto 40px;
+  padding: 0 64px;
+  text-align: right;
+  font-size: 14px;
+  color: #999;
 }
 
 .footer div + div {
